@@ -1,0 +1,8 @@
+buckeye==1.3
+deep-phonemizer==0.0.17
+netCDF4==1.6.2
+pandas==1.5.3
+pyndl==1.1.1
+tqdm==4.64.0
+numpy==1.23.5
+xarray==2022.12.0
