@@ -1,9 +1,7 @@
-import os
+"""Utility functions for calculating the prior and activation of a word in a trained NDL model.
+"""
 
 import numpy as np
-import pandas as pd
-import xarray as xr
-from tqdm import tqdm
 
 
 def is_cue(weight_matrix, cue):

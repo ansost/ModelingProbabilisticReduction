@@ -1,7 +1,6 @@
 ---
-title: "regression_analysis.Gh_ready"
-author: "Anna Stein"
-date: "2023-03-13"
+title: "Regression Analysis"
+author: "XXX"
 output: 
   html_document:
   toc: true
@@ -19,7 +18,7 @@ pacman::p_load(tidyselect, Hmisc, dplyr, knitr, languageR, vtable, broom.mixed, 
 
 Read in the data. 
 ```{r}
-df.initial <- read_csv('../data/regression_data.csv')
+df.initial <- read_csv('../data/regression_data_final.csv')
 str(df.initial)
 ```
 

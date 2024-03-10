@@ -1,21 +1,21 @@
-"""Extract word lists per speaker from Buckeye corpus."""
+"""Extract word lists per speaker from Buckeye corpus.
+There are 40 speakers, each has up to 6 tracks (interviews).
+The word class has two attributes: word and pause. Pauses are filtered out since they do not have an orthography attribute.
+
+Usage: 
+    python buckeye_text.py
+"""
+
 import buckeye
 
 if __name__ == "__main__":
     corpus = buckeye.corpus("../data/buckeye_corpus/")
 
-    # Iterating over all 40 speakers form corpus.
     for speaker in corpus:
-        # Init word_list.
         word_list = []
 
-        # Each speaker has up to 6 tracks (interviews).
-        # Iterating over each interview of a speaker.
         for track in speaker:
-            # Iterating over each word for wach interview to append it to the dataframe.
             for word in track.words:
-                # The word attribute has two attributes: word and pause.
-                # We dont want the pauses and they dont have an orthography attribute.
                 if hasattr(word, "orthography"):
                     word_list.append(word.orthography)
 
